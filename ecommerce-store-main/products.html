@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | WindBreaker</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/svg+xml" href="./images/header/favicon.svg">
+</head>
+<body>
+    <img src="./images/header/headerprod.jpg" style="display: none;">
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="./index.html"><img src="./images/header/1.png" alt="comp" width="225px"></a>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li id="toggleHighContrast" class="high-contrast-toggle">Версия для слепых</li>
+                        <li class="nav-item"><a href="index.html">Главная страница</a></li>
+                        <li class="nav-item"><a href="products.html">Каталог</a></li>
+                        <li class="nav-item"><a href="#footer">Наши контакты</a></li>
+                        <li class="nav-item"><a href="account.html">Личный кабинет</a></li>
+                    </ul>
+                </nav>
+                <a href="./cart.html"><img class="cart" src="./images/header/cart.svg"></a>
+                <div class="toggle"><i class="fa fa-bars"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="brands">
+        <div class="small-container">
+            <div class="child">
+                <div class="logo">
+                    <img src="./images/logos/logo1.png">
+                </div>
+                <div class="logo">
+                    <img src="./images/logos/logo3.png">
+                </div>
+                <div class="logo">
+                    <img src="./images/logos/logo5.png">
+                </div>
+                <div class="logo">
+                    <img src="./images/logos/logo4.png">
+                </div>
+                <div class="logo">
+                    <img src="./images/logos/logo2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-container">
+        <div class="child child-2">
+            <h2>Каталог</h2>
+            <select id="sort-dropdown">
+                <option disabled selected>Сортировать по</option>
+                <option id="shuffle-option">Цена</option>
+                <option>Популярность</option>
+                <option>Рейтинг</option>
+            </select>
+        </div>
+        <div class="child" id="product-container">
+            <div class="childprods" data-product="1">
+                <a href="./product_details.html"><img src="./images/products/14.png"></a>
+                <h4>Trek 520</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$59.99</p>
+            </div>
+            <div class="childprods" data-product="2">
+                <a href="./product_details.html"><img src="./images/products/3.png"></a>
+                <h4>Salsa Marrakesh</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$70.99</p>
+            </div>
+            <div class="childprods" data-product="3">
+                <a href="./product_details.html"><img src="./images/products/7.png"></a>
+                <h4>Fuji Touring</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$87.99</p>
+            </div>
+            <div class="childprods" data-product="4">
+                <a href="./product_details.html"><img src="./images/products/12.png"></a>
+                <h4>Surly Long Haul Trucker</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$138.99</p>
+            </div>
+            <div class="childprods" data-product="5">
+                <a href="./product_details.html"><img src="./images/products/1.png"></a>
+                <h4>Mongoose Legion L100</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$100.99</p>
+            </div>
+            <div class="childprods" data-product="6">
+                <a href="./product_details.html"><img src="./images/products/9.png"></a>
+                <h4>Sunday Primer</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$102.99</p>
+            </div>
+            <div class="childprods" data-product="7">
+                <a href="./product_details.html"><img src="./images/products/16.png"></a>
+                <h4>GT Pro Series</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$109.99</p>
+            </div>
+            <div class="childprods" data-product="8">
+                <a href="./product_details.html"><img src="./images/products/15.png"></a>
+                <h4>Riese & Müller Supercharger</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$129.99</p>
+            </div>
+            <div class="childprods" data-product="9">
+                <a href="./product_details.html"><img src="./images/products/8.png"></a>
+                <h4>VanMoof S3</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$89.99</p>
+            </div>
+            <div class="childprods" data-product="10">
+                <a href="./product_details.html"><img src="./images/products/2.png"></a>
+                <h4>Stromer ST2</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$45.99</p>
+            </div>
+            <div class="childprods" data-product="11">
+                <a href="./product_details.html"><img src="./images/products/13.png"></a>
+                <h4>Trek Allant+ 8</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$56.99</p>
+            </div>
+            <div class="childprods" data-product="12">
+                <a href="./product_details.html"><img src="./images/products/6.png"></a>
+                <h4>Specialized Turbo Vado SL 4.0</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$29.99</p>
+            </div>
+        </div>
+        <div class="page-btn">
+            <span>&#8592;</span>
+            <span><a href="./products.html">1</a></span>
+            <span><a href="./products.html">2</a></span>
+            <span><a href="./products.html">3</a></span>
+            <span>&#8594;</span>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="child">
+                <div class="footerChild1">
+                    <img src="./images/header/1.png">
+                    <h4>Напишите нам на почту: <a href="dmitriikuznetsof@gmail.com">dmitriikuznetsof@gmail.com</a></h4>
+                </div>
+                <div class="footerChild2">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="linkgoeshere">Оплата</a></li>
+                        <li><a href="linkgoeshere">Доставка</a></li>
+                        <li><a href="linkgoeshere">Условия Возврата</a></li>
+                        <li><a href="linkgoeshere">Часто задаваемые вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="footerChild2">
+                    <h3>Наши контакты</h3>
+                    <ul>
+                        <li><a href="https://vk.com/tttakada">VK</a></li>
+                        <li><a href="https://web.telegram.org/k/#@txlxntlxss">Telegram</a></li>
+                    </ul>
+                </div>
+                <div class="footerChild2">
+                    <h3>Наши офисы</h3>
+                    <ul>
+                        <li>Ул.Богдана Хмельницкого</li>
+                        <li>Саншайн парк</li>
+                        <li>HEllo?</li>
+                        <li>-</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="belowfooter">
+                &copy; WindBreaker, 2024 <br>
+                Novosibirsk, All rights reserved.
+            </div>
+        </div>
+    </div>
+    <script src="./src/js/script.js"></script>
+    <script>
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function shuffleProducts() {
+            const productContainer = document.getElementById('product-container');
+            const products = Array.from(productContainer.getElementsByClassName('childprods'));
+            shuffleArray(products);
+            productContainer.innerHTML = '';
+            products.forEach(product => productContainer.appendChild(product));
+        }
+
+        document.getElementById('sort-dropdown').addEventListener('change', function() {
+            if (this.value === 'Цена') {
+                shuffleProducts();
+            }
+            if (this.value === 'Популярность') {
+                shuffleProducts();
+            }
+            if (this.value === 'Рейтинг') {
+                shuffleProducts();
+            }
+        });
+
+        document.getElementById('toggleHighContrast').addEventListener('click', function() {
+                document.body.classList.toggle('high-contrast');
+            });
+    </script>
+</body>
+</html>

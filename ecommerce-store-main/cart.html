@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart | WindBreaker</title>
+        <link rel="stylesheet" href="./src/css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/svg+xml" href="./images/header/favicon.svg">
+    </head>
+    <body>
+        <img src="./images/header/headerprod.jpg" style="display: none;">
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="./index.html"><img src="./images/header/1.png" alt="comp" width="225px"></a>
+                    </div>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li id="toggleHighContrast" class="high-contrast-toggle">Версия для слепых</li>
+                            <li class="nav-item"><a href="index.html">Главная страница</a></li>
+                            <li class="nav-item"><a href="products.html">Каталог</a></li>
+                            <li class="nav-item"><a href="#footer">Наши контакты</a></li>
+                            <li class="nav-item"><a href="account.html">Личный кабинет</a></li>
+                        </ul>
+                    </nav>
+                    <a href="./cart.html"><img class="cart" src="./images/header/cart.svg"></a>
+                    <div class="toggle"><i class="fa fa-bars"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="formPage" id="notLoggedInMessage">
+                <h2>You aren't logged in. You need an account to add items/view your cart.</h2>
+                <div class="btn"><a href="./account.html">My Account</a></div>
+            </div>
+            <div class="childprods" data-product="1">
+                <h2>Ваша корзина</h2>
+                <a href="./product_details.html"><img src="./images/products/4.png"></a>
+                <h4>Mongoose Legion L100</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$59.99</p>
+            </div>
+        </div>
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="child">
+                    <div class="footerChild1">
+                        <img src="./images/header/1.png">
+                        <h4>Напишите нам: <a href="dimamegarunner1987@mail.com">dimamegarunner1987@mail.com</a></h4>
+                    </div>
+                    <div class="footerChild2">
+                        <h3>Помощь</h3>
+                        <ul>
+                            <li><a href="linkgoeshere">Оплата</a></li>
+                            <li><a href="linkgoeshere">Доставка</a></li>
+                            <li><a href="linkgoeshere">Условия Возврата</a></li>
+                            <li><a href="linkgoeshere">Часто задаваемые вопросы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerChild2">
+                        <h3>Наши контакты</h3>
+                        <ul>
+                            <li><a href="https://vk.com/tttakada">VK</a></li>
+                            <li><a href="https://web.telegram.org/k/#@txlxntlxss">Telegram</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerChild2">
+                        <h3>Наши офисы</h3>
+                        <ul>
+                            <li>Ул.Богдана Хмельницкого</li>
+                            <li>Саншайн парк</li>
+                            <li>HEllo?</li>
+                            <li>-</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="belowfooter">
+                    &copy; WindBreaker, 2024 <br>
+                    Novosibirsk, All rights reserved.
+                </div>
+            </div>
+        </div>
+        <script src="./src/js/script.js"></script>
+        <script>
+            function checkLoginStatus() {
+                const user = JSON.parse(localStorage.getItem('user'));
+                const notLoggedInMessage = document.getElementById('notLoggedInMessage');
+                const cartContents = document.getElementById('cartContents');
+        
+                if (user) {
+                    notLoggedInMessage.style.display = 'none';
+                    cartContents.style.display = 'block';
+                } else {
+                    notLoggedInMessage.style.display = 'block';
+                    cartContents.style.display = 'none';
+                }
+            }
+        
+            window.onload = checkLoginStatus;
+
+
+
+            document.getElementById('toggleHighContrast').addEventListener('click', function() {
+                document.body.classList.toggle('high-contrast');
+            });
+        </script>
+    </body>
+</html>

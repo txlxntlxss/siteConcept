@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | WindBreaker</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/svg+xml" href="./images/header/favicon.svg">
+    <style>
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .user-info {
+            margin-top: 20px;
+        }
+        .file-input {
+            margin-top: 10px;
+        }
+        .edit-profile {
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .styled-button {
+            background-color: #525252;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 4px 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .styled-input {
+            background-color: #525252;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+        .reviews-section {
+            margin-top: 40px;
+        }
+        .review-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/header/headerprod.jpg" style="display: none;">
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="./index.html"><img src="./images/header/1.png" alt="comp" width="225px"></a>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li id="toggleHighContrast" class="high-contrast-toggle">Версия для слепых</li>
+                        <li class="nav-item"><a href="index.html">Главная страница</a></li>
+                        <li class="nav-item"><a href="products.html">Каталог</a></li>
+                        <li class="nav-item"><a href="#footer">Наши контакты</a></li>
+                        <li class="nav-item"><a href="account.html">Личный кабинет</a></li>
+                    </ul>
+                </nav>
+                <a href="./cart.html"><img class="cart" src="./images/header/cart.svg"></a>
+                <div class="toggle"><i class="fa fa-bars"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="formPage">
+            <h2>Мой аккаунт</h2>
+            <div class="user-info">
+                <img id="userAvatar" class="avatar" src="./images/products/avatar.png" alt="User Avatar">
+                <p><strong>Имя:</strong> <span id="userUsername">Loading...</span></p>
+                <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+            </div>
+            <div class="edit-profile">
+                <h3>Редактировать профиль</h3>
+                <label for="newUsername">Новое имя:</label>
+                <input type="text" id="newUsername" class="styled-input" placeholder="Введите новое имя">
+                <br>
+                <label for="newAvatar" class="file-input">Новый аватар:</label>
+                <input type="file" id="newAvatar" accept="image/*">
+                <br>
+                <button class="styled-button" onclick="saveProfile()">Сохранить изменения</button>
+            </div>
+            <div class="reviews-section">
+                <h3>Оставить отзыв</h3>
+                <textarea id="reviewText" placeholder="Введите ваш отзыв здесь..." rows="3" style="width: 100%; background-color: #525252;"></textarea>
+                <br>
+                <label for="reviewRating">Оценка (1-5):</label>
+                <input type="number" id="reviewRating" min="1" max="5" style="background-color: #525252;" placeholder="Введите оценку">
+                <br>
+                <button class="styled-button" onclick="submitReview()">Отправить отзыв</button>
+                <h3>Отзывы:</h3>
+                <div id="reviewsContainer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="child">
+                <div class="footerChild1">
+                    <img src="./images/header/1.png">
+                    <h4>Напишите нам: <a href="dimamegarunner1987@mail.com">dimamegarunner1987@mail.com</a></h4>
+                </div>
+                <div class="footerChild2">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="linkgoeshere">Оплата</a></li>
+                        <li><a href="linkgoeshere">Доставка</a></li>
+                        <li><a href="linkgoeshere">Условия Возврата</a></li>
+                        <li><a href="linkgoeshere">Часто задаваемые вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="footerChild2">
+                    <h3>Наши контакты</h3>
+                    <ul>
+                        <li><a href="linkgoeshere">Instagram</a></li>
+                        <li><a href="linkgoeshere">Facebook</a></li>
+                        <li><a href="https://vk.com/tttakada">VK</a></li>
+                        <li><a href="https://web.telegram.org/k/#@txlxntlxss">Telegram</a></li>
+                    </ul>
+                </div>
+                <div class="footerChild2">
+                    <h3>Наши офисы</h3>
+                    <ul>
+                        <li>Ул.Богдана Хмельницкого</li>
+                        <li>Саншайн парк</li>
+                        <li>HEllo?</li>
+                        <li>-</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="belowfooter">
+                &copy; WindBreaker, 2024 <br>
+                Novosibirsk, All rights reserved.
+            </div>
+        </div>
+    </div>
+    <script>
+        // Retrieve user data from local storage and display it
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (user) {
+                document.getElementById('userUsername').textContent = user.username;
+                document.getElementById('userEmail').textContent = user.email;
+                if (user.avatar) {
+                    document.getElementById('userAvatar').src = user.avatar;
+                }
+                loadReviews();
+            } else {
+                alert('User data not found. Please log in again.');
+                window.location.href = 'account.html';
+            }
+        });
+
+        // Save profile changes
+        function saveProfile() {
+            const newUsername = document.getElementById('newUsername').value;
+            const newAvatarFile = document.getElementById('newAvatar').files[0];
+            const user = JSON.parse(localStorage.getItem('user'));
+
+            if (user) {
+                if (newUsername) {
+                    user.username = newUsername;
+                }
+                if (newAvatarFile) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        user.avatar = event.target.result;
+                        document.getElementById('userAvatar').src = user.avatar;
+                        localStorage.setItem('user', JSON.stringify(user));
+                        alert('Профиль успешно обновлен!');
+                    };
+                    reader.readAsDataURL(newAvatarFile);
+                } else {
+                    localStorage.setItem('user', JSON.stringify(user));
+                    alert('Профиль успешно обновлен!');
+                }
+            }
+        }
+
+        // Submit a review
+        function submitReview() {
+            const reviewText = document.getElementById('reviewText').value;
+            const reviewRating = document.getElementById('reviewRating').value;
+            const user = JSON.parse(localStorage.getItem('user'));
+
+            if (reviewText && reviewRating && user) {
+                const review = {
+                    username: user.username,
+                    text: reviewText,
+                    rating: reviewRating,
+                    date: new Date().toLocaleString()
+                };
+
+                const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+                reviews.push(review);
+                localStorage.setItem('reviews', JSON.stringify(reviews));
+
+                loadReviews();
+                document.getElementById('reviewText').value = '';
+                document.getElementById('reviewRating').value = '';
+            } else {
+                alert('Пожалуйста, заполните все поля для отзыва.');
+            }
+        }
+
+        function loadReviews() {
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            reviewsContainer.innerHTML = '';
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+            reviews.forEach((review, index) => {
+                const reviewElement = document.createElement('div');
+                reviewElement.className = 'review-item';
+                reviewElement.innerHTML = `
+                    <strong>${review.username}</strong> (${review.rating} звезд)<br>
+                    ${review.text}<br>
+                    <small>${review.date}</small>
+                    <button class="delete-button" onclick="deleteReview(${index})" style="background-color: #525252;">Удалить</button>
+                `;
+                reviewsContainer.appendChild(reviewElement);
+            });
+        }
+
+        // Delete a review
+        function deleteReview(index) {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            if (index >= 0 && index < reviews.length) {
+                reviews.splice(index, 1);
+                localStorage.setItem('reviews', JSON.stringify(reviews));
+                loadReviews();
+            }
+        }
+
+        document.getElementById('toggleHighContrast').addEventListener('click', function() {
+                document.body.classList.toggle('high-contrast');
+            });
+    </script>
+</body>
+</html>
